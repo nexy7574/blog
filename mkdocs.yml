@@ -1,0 +1,75 @@
+site_name: Nex's Blog
+repo_url: https://codeberg.org/nexy7574/blog
+repo_name: nexy7574/blog
+edit_uri: edit/dev/docs/
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+      fallback_to_build_date: true
+  - git-committers:
+      repository: nexy7574/blog
+      branch: dev
+  - blog:
+      blog_dir: .
+      blog_toc: true
+      # post_dir: posts/.*
+      post_date_format: full
+      post_excerpt: required
+      post_excerpt_separator: <!-- more -->
+  - search
+  - social
+  - tags
+  - privacy
+  - rss:
+      match_path: posts/.*
+      date_from_meta:
+        as_creation: date
+  - minify:
+      minify_html: true
+site_url: https://blog.nexy7574.co.uk
+theme:
+  name: material
+  features:
+    - content.action.edit
+    - search.suggest
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - header.autohide
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Noto Sans Display
+    code: JetBrains Mono
+  language: en
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true

@@ -2,6 +2,9 @@ site_name: Nex's Blog
 repo_url: https://codeberg.org/nexy7574/blog
 repo_name: nexy7574/blog
 edit_uri: edit/dev/docs/
+remote_branch: pages
+draft_docs: |
+  drafts
 plugins:
   - git-revision-date-localized:
       enable_creation_date: true
@@ -73,3 +76,12 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
+extra:
+  social:
+    - icon: fontawesome/brands/mastodon
+      name: fediverse
+      link: https://fedi.transgender.ing/@nex
+    - icon: simple/matrix
+      name: Matrix
+      link: https://fedi.transgender.ing/@nex
+

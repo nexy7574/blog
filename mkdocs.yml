@@ -1,4 +1,5 @@
 site_name: Nex's Blog
+site_description: I ran out of characters for microblogging so this is where the big words go
 repo_url: https://codeberg.org/nexy7574/blog
 repo_name: nexy7574/blog
 edit_uri: edit/dev/docs/
@@ -84,4 +85,6 @@ extra:
     - icon: simple/matrix
       name: Matrix
       link: https://fedi.transgender.ing/@nex
-
+    - icon: simple/rss
+      name: RSS Feed
+      link: https://nexy7574.codeberg.page/blog/feed_rss_created.xml

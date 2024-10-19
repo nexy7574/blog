@@ -12,9 +12,9 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       fallback_to_build_date: true
-  - git-committers:
-      repository: nexy7574/blog
-      branch: dev
+  # - git-committers:
+  #     repository: nexy7574/blog
+  #     branch: dev
   - blog:
       blog_dir: .
       blog_toc: true
@@ -86,7 +86,7 @@ extra:
       link: https://fedi.transgender.ing/@nex
     - icon: simple/matrix
       name: Matrix
-      link: https://fedi.transgender.ing/@nex
+      link: https://matrix.to/#/#general:nexy7574.co.uk
     - icon: simple/rss
       name: RSS Feed
       link: https://nexy7574.codeberg.page/blog/feed_rss_created.xml

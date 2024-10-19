@@ -5,6 +5,7 @@ categories:
   - Programming
   - Software
   - Meta
+  - Guides
 ---
 
 # A(nother) new site
@@ -101,8 +102,8 @@ manually went through and replaced all of my remote references for other project
     If you visit <https://git.i-am.nexus/nex/howmuchdoesthesims4cost.lol> for example, you will be
     redirected to <https://codeberg.org/nexy7574/howmuchdoesthesims4cost.lol>.
 
-    ~~I do not intend to keep the forgejo server running forever, so do not visit that link in the future.
-    If I remember, I will update this post.~~
+    <del>I do not intend to keep the forgejo server running forever, so do not visit that link in the future.
+    If I remember, I will update this post.</del>
 
 This also came with another big advantage - codeberg pages.
 Codeberg "recently" (to my knowledge) launched <https://codeberg.page>, which allows
@@ -122,6 +123,20 @@ The workflow with codeberg pages works like this:
 
 So really, the only human part of this process is steps 1 and 2. The rest is done automatically,
 even RSS!
+
+!!! warning "A pitfall with codeberg pages, custom domains, and mkdocs"
+    When I first wrote this article, I couldn't figure out why I was unable to publish my pages to
+    codeberg pages. Upon visiting <https://codeberg.page>, it told me to create a file called `.domains`
+    with my custom domain of choice, and then point a CNAME at it.
+
+    I did this, but it still didn't work, and instead just gave me an SSL error.
+
+    It turns out that the `.domains` file was not being added to the production build by mkdocs, so I needed
+    to add [this change](https://codeberg.org/nexy7574/blog/commit/c1aaa54eb1034ea0fea6bd2cff7bf0f44c7169e7#diff-e06ae62d2bf20523432731a2d6fa671c79156f34)
+    to my mkdocs.yml file.
+
+    this forces mkdocs to include the `.domains` file in the production build, meaning it appears in the
+    `pages` branch, codeberg picks up on it, and now <https://blog.nexy7574.co.uk> works!
 
 ## Conclusion
 

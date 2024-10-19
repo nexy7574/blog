@@ -38,7 +38,6 @@ plugins:
         json_updated: feed_updated.json
         rss_created: feed.xml
         rss_updated: feed_updated.xml
-      match_path: ".*"
       pretty_print: false
       rss_feed_enabled: true
       json_feed_enabled: true

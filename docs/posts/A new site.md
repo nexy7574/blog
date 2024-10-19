@@ -97,8 +97,12 @@ I wrote a quick script that would mass-migrate my forgejo repos to Codeberg, and
 manually went through and replaced all of my remote references for other projects.
 
 !!! danger "The git server will be pulled down at some point"
-    I do not intend to keep the forgejo server running forever, so do not visit that link in the future.
-    If I remember, I will update this post.
+    **Update** as of 2024-10-19: The domain is now redirecting all queries to their equivalent on Codeberg.
+    If you visit <https://git.i-am.nexus/nex/howmuchdoesthesims4cost.lol> for example, you will be
+    redirected to <https://codeberg.org/nexy7574/howmuchdoesthesims4cost.lol>.
+
+    ~~I do not intend to keep the forgejo server running forever, so do not visit that link in the future.
+    If I remember, I will update this post.~~
 
 This also came with another big advantage - codeberg pages.
 Codeberg "recently" (to my knowledge) launched <https://codeberg.page>, which allows

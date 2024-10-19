@@ -4,6 +4,8 @@ repo_url: https://codeberg.org/nexy7574/blog
 repo_name: nexy7574/blog
 edit_uri: edit/dev/docs/
 remote_branch: pages
+exclude_docs: |
+  !.domains
 draft_docs: |
   drafts
 plugins:

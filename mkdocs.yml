@@ -27,9 +27,23 @@ plugins:
   - tags
   - privacy
   - rss:
+      abstract_delimiter: <!-- more -->
       match_path: posts/.*
       date_from_meta:
         as_creation: date
+        as_update: "git"
+        default_timezone: Europe/London
+      feeds_filenames:
+        json_created: feed.json
+        json_updated: feed_updated.json
+        rss_created: feed.xml
+        rss_updated: feed_updated.xml
+      match_path: ".*"
+      pretty_print: false
+      rss_feed_enabled: true
+      json_feed_enabled: true
+      use_git: true
+      use_material_social_cards: true
   - minify:
       minify_html: true
 site_url: https://blog.nexy7574.co.uk
@@ -89,4 +103,4 @@ extra:
       link: https://matrix.to/#/#general:nexy7574.co.uk
     - icon: simple/rss
       name: RSS Feed
-      link: https://blog.nexy7574.co.uk/feed_rss_created.xml
+      link: https://blog.nexy7574.co.uk/feed.xml
